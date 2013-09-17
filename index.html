@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/blueimp-gallery.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+      html, body {
+        font-size: 0;
+        background-color: #1a1a1a;      
+      }
+      h1, h6{
+        color: #d7d7d7;      
+      }
+      .blueimp-gallery>.prev, .blueimp-gallery>.next {
+        border-width: 0;
+        background: none;
+        font-size: 30px;
+      }
+      
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+    <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+      <!-- <h3 class="title"></h3> -->
+      <a class="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="next"><span class="glyphicon glyphicon-chevron-right" style="margin-left: -15px;"></span></a>
+      <a class="close"><span class="glyphicon glyphicon-remove"></span></a>
+      <a class="play-pause"></a>
+      <!-- <ol class="indicator"></ol> -->
+    </div>
+    <div class="header-text">
+      <h1>Mark Duggan</h1>
+    </div>
+
+    <div id="links">
+      <a href="images/DSC0269-1.jpg" title="text" class="A">
+        <img src="images/DSC0269-1_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0274-1.jpg" title="text">
+        <img src="images/DSC0274-1_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0285-1.jpg" title="text">
+        <img src="images/DSC0285-1_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0291-1.jpg" title="text" class="A">
+        <img src="images/DSC0291-1_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0380.jpg" title="text">
+        <img src="images/DSC0380_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0381.jpg" title="text">
+        <img src="images/DSC0381_thumb.jpg" alt="text">
+      </a>
+      <a href="images/DSC0487.jpg" title="text">
+        <img src="images/DSC0487_thumb.jpg" alt="text">
+      </a>
+    </div>
+
+    <div class="pull-right">
+           
+      <h6>
+        &copy; Mark Duggan 2013
+      </h6>
+    
+    </div>
+
+  </div> <!-- /container -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/blueimp-gallery.min.js"></script>
+    <script>
+    document.getElementById('links').onclick = function (event) {
+      event = event || window.event;
+      var target = event.target || event.srcElement,
+      link = target.src ? target.parentNode : target,
+      options = {index: link, event: event},
+      links = this.getElementsByTagName('a');
+      blueimp.Gallery(links, options);
+    };
+    </script>
+
+  </body>
+</html>
